@@ -18,7 +18,7 @@ namespace DemoApps.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -30,7 +30,7 @@ namespace DemoApps.Controllers
             .ToArray();
         }
 
-        [HttpGet(Name = "GetDummy")]
+        [HttpGet("dummy")]
         public IActionResult GetV2()
         {
             return Ok(new
