@@ -19,10 +19,10 @@ jobs:
           find . -type f \( -name "*.csproj" -o -name "*.sln" -o -name "*.slnx" \)
 
       - name: Restore
-        run: dotnet restore DemoApps.slnx
+        run: dotnet restore DemoApps/DemoApps/DemoApps.csproj
 
       - name: Build
-        run: dotnet build DemoApps.slnx -c Release
+        run: dotnet build DemoApps/DemoApps/DemoApps.csproj -c Release
 
       - name: Publish
-        run: dotnet publish DemoApps.slnx -c Release -o /var/www/DemoApps
+        run: dotnet publish DemoApps/DemoApps/DemoApps.csproj -c Release -o /var/www/DemoApps
