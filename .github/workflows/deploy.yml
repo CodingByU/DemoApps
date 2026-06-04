@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Restore
-        run: dotnet restore DemoApps/DemoApps.csproj
+        run: dotnet restore DemoApps.slnx
 
       - name: Build
-        run: dotnet build DemoApps/DemoApps.csproj -c Release
+        run: dotnet build DemoApps.slnx -c Release
 
       - name: Publish
-        run: dotnet publish DemoApps/DemoApps.csproj -c Release -o /var/www/DemoApps
+        run: dotnet publish DemoApps.slnx -c Release -o /var/www/DemoApps
