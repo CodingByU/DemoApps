@@ -31,7 +31,7 @@ namespace DemoApps.Controllers
         }
 
         [HttpGet(Name = "GetDummy")]
-        public IActionResult Get()
+        public IActionResult GetV2()
         {
             return Ok(new
             {
