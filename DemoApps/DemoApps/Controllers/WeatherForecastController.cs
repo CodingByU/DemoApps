@@ -29,5 +29,16 @@ namespace DemoApps.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet(Name = "GetDummy")]
+        public IActionResult Get()
+        {
+            return Ok(new
+            {
+                Success = true,
+                Message = "API is running",
+                ServerTime = DateTime.Now
+            });
+        }
     }
 }
