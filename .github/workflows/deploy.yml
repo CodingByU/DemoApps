@@ -26,3 +26,11 @@ jobs:
 
       - name: Publish
         run: dotnet publish DemoApps/DemoApps/DemoApps.csproj -c Release -o /var/www/DemoApps
+
+      - name: Restart Service
+        run: |
+          sudo systemctl restart DemoApps
+
+      - name: Verify
+        run: |
+          sudo systemctl status DemoApps --no-pager
