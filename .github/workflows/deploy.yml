@@ -13,11 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-    - name: Restore
-  run: dotnet restore DemoApps/DemoApps.csproj
+      - name: Restore
+        run: dotnet restore DemoApps/DemoApps.csproj
 
-- name: Build
-  run: dotnet build DemoApps/DemoApps.csproj -c Release
+      - name: Build
+        run: dotnet build DemoApps/DemoApps.csproj -c Release
 
-- name: Publish
-  run: dotnet publish DemoApps/DemoApps.csproj -c Release -o /var/www/DemoApps
+      - name: Publish
+        run: dotnet publish DemoApps/DemoApps.csproj -c Release -o /var/www/DemoApps
