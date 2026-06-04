@@ -13,6 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Show repository structure
+        run: |
+          pwd
+          find . -type f \( -name "*.csproj" -o -name "*.sln" -o -name "*.slnx" \)
+
       - name: Restore
         run: dotnet restore DemoApps.slnx
 
